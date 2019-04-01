@@ -9,3 +9,18 @@
 
 Предпочтение языку go. Остальные инструменты могут быть любыми. 
 Мелочи, которые не описаны в задании - можно выбрать самостоятельно или, если нужно, уточнить.
+
+## Создать базу
+CREATE TABLE users
+(
+	id SERIAL PRIMARY KEY,
+	email TEXT NOT NULL UNIQUE,
+	password TEXT NOT NULL,
+	ip TEXT
+);
+
+## Создать тестового пользователя
+INSERT INTO users
+	(email, password, ip)
+VALUES
+	('john@mail.mail', '1Password23', '127.0.0.1');
